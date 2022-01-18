@@ -256,6 +256,17 @@ where
     }
 }
 
+impl<K, V, const N: usize> From<[(K, V); N]> for HashMap<K, V>
+where 
+    K: Hash + Eq
+{
+    fn from(arr: [(K, V); N]) -> Self {
+        // arr.into_iter().collect()
+        std::array::IntoIter::new(arr).collect()
+    }
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;

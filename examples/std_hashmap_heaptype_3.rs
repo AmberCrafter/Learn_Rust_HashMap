@@ -15,18 +15,18 @@ impl Viking {
 }
 
 fn main() {
-    // // Use a HashMap to store the vikings' health points.
-    // let vikings = HashMap::from([
-    //     (Viking::new("Einar", "Norway"), 25),
-    //     (Viking::new("Olaf", "Denmark"), 24),
-    //     (Viking::new("Harald", "Iceland"), 12),
-    // ]);
+    // Use a HashMap to store the vikings' health points.
+    let vikings = HashMap::from([
+        (Viking::new("Einar", "Norway"), 25),
+        (Viking::new("Olaf", "Denmark"), 24),
+        (Viking::new("Harald", "Iceland"), 12),
+    ]);
 
-    let mut vikings = HashMap::new();
+    // let mut vikings = HashMap::new();
 
-    vikings.insert(Viking::new("Einar", "Norway"), 25);
-    vikings.insert(Viking::new("Olaf", "Denmark"), 24);
-    vikings.insert(Viking::new("Harald", "Iceland"), 12);
+    // vikings.insert(Viking::new("Einar", "Norway"), 25);
+    // vikings.insert(Viking::new("Olaf", "Denmark"), 24);
+    // vikings.insert(Viking::new("Harald", "Iceland"), 12);
     
     // Use derived implementation to print the status of the vikings.
     for (viking, health) in &vikings {
